@@ -1,0 +1,75 @@
+cabal-version: 3.0
+name: relations
+version: 0
+synopsis: Lawful relations between data types
+description:
+  Various standard patterns captured in a set of typeclasses capturing relations between pairs of data types.
+
+  The following relations are captured:
+
+  - Of a UTF-8 encoded form of data to a decoded form (e.g., `Data.ByteString.ByteString` to `Data.Text.Text`).
+
+  - Of a lazy form of data to a strict form (e.g., `Data.Text.Lazy.Text` to `Data.Text.Text`).
+
+  - Of a builder form of data to a constructed form (e.g., `Data.Text.Builder` to `Data.Text.Text`).
+
+  - Of a list to its element type (e.g., `[a]` to `a`, `Data.Text.Text` to `Char`).
+
+  There may be many more relations in the future. Suggestions are welcome.
+
+  The relations are lawful, i.e., they satisfy a number of algebraic properties.
+
+category: Conversion
+homepage: https://github.com/nikita-volkov/relations
+bug-reports: https://github.com/nikita-volkov/relations/issues
+author: Nikita Volkov <nikita.y.volkov@mail.ru>
+maintainer: Nikita Volkov <nikita.y.volkov@mail.ru>
+copyright: (c) 2025 Nikita Volkov
+license: MIT
+license-file: LICENSE
+extra-source-files:
+  CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/nikita-volkov/relations
+
+common base
+  default-language: Haskell2010
+  default-extensions:
+    BlockArguments
+    DefaultSignatures
+    FlexibleContexts
+    FlexibleInstances
+    FunctionalDependencies
+    LambdaCase
+    MagicHash
+    MultiParamTypeClasses
+    NoImplicitPrelude
+    OverloadedStrings
+    ScopedTypeVariables
+    TypeApplications
+    UndecidableSuperClasses
+
+library
+  import: base
+  hs-source-dirs: src/library
+  exposed-modules:
+    Relations
+
+  other-modules:
+    Relations.Algebra
+    Relations.Algebra.Lazy
+    Relations.Algebra.List
+    Relations.Algebra.Utf8
+    Relations.Instances.ByteString
+    Relations.Instances.LazyByteString
+    Relations.Instances.LazyText
+    Relations.Instances.Text
+    Relations.Instances.TextBuilder
+
+  build-depends:
+    base >=4.12 && <5,
+    bytestring >=0.10 && <0.13,
+    text >=1.2 && <2.2,
+    text-builder >=1 && <1.1,
