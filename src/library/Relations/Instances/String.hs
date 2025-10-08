@@ -9,7 +9,6 @@ import Prelude
 
 instance IsListOf Char String where
   list = id
-  foldrList = foldr
   unlist = id
 
 instance IsIso8601EncodingOf Time.UTCTime String where

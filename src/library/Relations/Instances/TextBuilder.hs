@@ -11,5 +11,4 @@ import Prelude
 
 instance IsListOf Char TextBuilder where
   list = Data.Text.unpack . TextBuilder.toText
-  foldrList f z = Data.Text.foldr f z . TextBuilder.toText
   unlist = foldMap TextBuilder.char

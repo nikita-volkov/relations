@@ -9,7 +9,6 @@ import Prelude
 
 instance IsListOf Char Data.Text.Lazy.Text where
   list = Data.Text.Lazy.unpack
-  foldrList = Data.Text.Lazy.foldr
   unlist = Data.Text.Lazy.pack
 
 instance IsLazyFormOf Data.Text.Text Data.Text.Lazy.Text where

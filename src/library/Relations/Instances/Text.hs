@@ -11,7 +11,6 @@ import Prelude
 
 instance IsListOf Char Text where
   list = Data.Text.unpack
-  foldrList = Data.Text.foldr
   unlist = Data.Text.pack
 
 instance IsIso8601EncodingOf Time.UTCTime Text where
