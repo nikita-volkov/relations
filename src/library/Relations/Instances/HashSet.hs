@@ -7,8 +7,8 @@ import Data.Hashable (Hashable)
 import Relations.Algebra
 
 instance (Hashable element) => IsListOf element (Data.HashSet.HashSet element) where
-  unpackList = Data.HashSet.toList
-  packList = Data.HashSet.fromList
+  list = Data.HashSet.toList
+  unlist = Data.HashSet.fromList
   foldrList f z = Data.HashSet.foldr f z
 
 instance (Hashable element) => IsSetOf element (Data.HashSet.HashSet element) where

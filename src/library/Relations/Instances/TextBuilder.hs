@@ -10,6 +10,6 @@ import qualified TextBuilder
 import Prelude
 
 instance IsListOf Char TextBuilder where
-  unpackList = Data.Text.unpack . TextBuilder.toText
+  list = Data.Text.unpack . TextBuilder.toText
   foldrList f z = Data.Text.foldr f z . TextBuilder.toText
-  packList = foldMap TextBuilder.char
+  unlist = foldMap TextBuilder.char
