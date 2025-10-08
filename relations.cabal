@@ -5,13 +5,11 @@ synopsis: Lawful relations between data types
 description:
   Various standard patterns captured in a set of typeclasses capturing relations between pairs of data types.
 
-  The following relations are captured:
+  Examples of relations captured:
 
   - Of a UTF-8 encoded form of data to a decoded form (e.g., `Data.ByteString.ByteString` to `Data.Text.Text`).
 
   - Of a lazy form of data to a strict form (e.g., `Data.Text.Lazy.Text` to `Data.Text.Text`).
-
-  - Of a builder form of data to a constructed form (e.g., `Data.Text.Builder` to `Data.Text.Text`).
 
   - Of a list to its element type (e.g., `[a]` to `a`, `Data.Text.Text` to `Char`).
 
