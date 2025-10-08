@@ -8,9 +8,9 @@ import Relations.Algebra
 import Prelude
 
 instance IsListOf Char Data.Text.Lazy.Text where
-  unpackSequence = Data.Text.Lazy.unpack
-  foldrSequence = Data.Text.Lazy.foldr
-  packSequence = Data.Text.Lazy.pack
+  unpackList = Data.Text.Lazy.unpack
+  foldrList = Data.Text.Lazy.foldr
+  packList = Data.Text.Lazy.pack
 
 instance IsLazyFormOf Data.Text.Text Data.Text.Lazy.Text where
   fromStrict = Data.Text.Lazy.fromStrict

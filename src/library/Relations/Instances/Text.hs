@@ -8,6 +8,6 @@ import Relations.Algebra
 import Prelude
 
 instance IsListOf Char Text where
-  unpackSequence = Data.Text.unpack
-  foldrSequence = Data.Text.foldr
-  packSequence = Data.Text.pack
+  unpackList = Data.Text.unpack
+  foldrList = Data.Text.foldr
+  packList = Data.Text.pack
