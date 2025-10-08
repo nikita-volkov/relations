@@ -64,13 +64,18 @@ library
     Relations.Algebra.Set
     Relations.Algebra.Utf8
     Relations.Instances.ByteString
+    Relations.Instances.HashSet
     Relations.Instances.LazyByteString
     Relations.Instances.LazyText
+    Relations.Instances.Set
     Relations.Instances.Text
     Relations.Instances.TextBuilder
 
   build-depends:
     base >=4.12 && <5,
     bytestring >=0.10 && <0.13,
+    containers >=0.6 && <0.9,
+    hashable >=1.2 && <2,
     text >=1.2 && <2.2,
     text-builder >=1 && <1.1,
+    unordered-containers >=0.2 && <0.4,
