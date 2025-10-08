@@ -16,4 +16,3 @@ data Utf8DecodingError
       (Maybe (Word8, Maybe (Word8, Maybe (Word8, Maybe Word8))))
       -- | Description of the error.
       Text
-
