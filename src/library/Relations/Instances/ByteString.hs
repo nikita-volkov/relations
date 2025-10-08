@@ -11,12 +11,7 @@ import qualified Data.Text.Lazy
 import qualified Data.Text.Lazy.Encoding
 import Relations.Algebra
 import Relations.Instances.Text ()
-import qualified TextBuilder
 import Prelude
-
-instance IsUtf8EncodingOf TextBuilder.TextBuilder Data.ByteString.ByteString where
-  encodeUtf8 = encodeUtf8 . TextBuilder.toText
-  decodeUtf8 = fmap TextBuilder.text . decodeUtf8
 
 instance IsUtf8EncodingOf Data.Text.Text Data.ByteString.ByteString where
   encodeUtf8 = Data.Text.Encoding.encodeUtf8

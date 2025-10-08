@@ -71,7 +71,6 @@ library
     Relations.Instances.Set
     Relations.Instances.String
     Relations.Instances.Text
-    Relations.Instances.TextBuilder
 
   build-depends:
     base >=4.12 && <5,
@@ -79,6 +78,5 @@ library
     containers >=0.6 && <0.9,
     hashable >=1.2 && <2,
     text >=1.2 && <2.2,
-    text-builder >=1 && <1.1,
     time >=1.12 && <2,
     unordered-containers >=0.2 && <0.4,
