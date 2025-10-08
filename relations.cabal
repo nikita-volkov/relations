@@ -59,6 +59,7 @@ library
 
   other-modules:
     Relations.Algebra
+    Relations.Algebra.Iso8601
     Relations.Algebra.Lazy
     Relations.Algebra.List
     Relations.Algebra.Set
@@ -68,6 +69,7 @@ library
     Relations.Instances.LazyByteString
     Relations.Instances.LazyText
     Relations.Instances.Set
+    Relations.Instances.String
     Relations.Instances.Text
     Relations.Instances.TextBuilder
 
@@ -78,4 +80,5 @@ library
     hashable >=1.2 && <2,
     text >=1.2 && <2.2,
     text-builder >=1 && <1.1,
+    time >=1.12 && <2,
     unordered-containers >=0.2 && <0.4,
