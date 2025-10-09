@@ -62,6 +62,7 @@ library
     Relations.Algebra.List
     Relations.Algebra.Set
     Relations.Algebra.Utf8
+    Relations.Instances
     Relations.Instances.ByteString
     Relations.Instances.HashSet
     Relations.Instances.LazyByteString
