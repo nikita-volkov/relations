@@ -23,6 +23,7 @@ instance IsUtf8EncodingOf Data.Text.Text Data.ByteString.ByteString where
         Left (Utf8DecodingError Nothing Nothing "Unexpected decoding error")
       Right text ->
         Right text
+  decodeUtf8Lenient = Data.Text.Encoding.decodeUtf8With Data.Text.Encoding.Error.lenientDecode
 
 instance IsUtf8EncodingOf Data.Text.Lazy.Text Data.ByteString.ByteString where
   encodeUtf8 = Data.ByteString.Lazy.toStrict . Data.Text.Lazy.Encoding.encodeUtf8
@@ -35,3 +36,4 @@ instance IsUtf8EncodingOf Data.Text.Lazy.Text Data.ByteString.ByteString where
             Left (Utf8DecodingError Nothing Nothing "Unexpected decoding error")
           Right text ->
             Right text
+  decodeUtf8Lenient = Data.Text.Lazy.Encoding.decodeUtf8With Data.Text.Encoding.Error.lenientDecode . Data.ByteString.Lazy.fromStrict

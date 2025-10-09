@@ -6,6 +6,7 @@ import Prelude
 
 class IsUtf8EncodingOf decoding encoding where
   decodeUtf8 :: encoding -> Either Utf8DecodingError decoding
+  decodeUtf8Lenient :: encoding -> decoding
   encodeUtf8 :: decoding -> encoding
 
 data Utf8DecodingError

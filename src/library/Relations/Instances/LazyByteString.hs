@@ -21,6 +21,7 @@ instance IsUtf8EncodingOf Data.Text.Lazy.Text Data.ByteString.Lazy.ByteString wh
         Left (Utf8DecodingError Nothing Nothing "Unexpected decoding error")
       Right text ->
         Right text
+  decodeUtf8Lenient = Data.Text.Lazy.Encoding.decodeUtf8With Data.Text.Encoding.Error.lenientDecode
 
 instance IsLazyFormOf Data.ByteString.ByteString Data.ByteString.Lazy.ByteString where
   fromStrict = Data.ByteString.Lazy.fromStrict
