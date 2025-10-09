@@ -57,6 +57,7 @@ library
 
   other-modules:
     Relations.Algebra
+    Relations.Algebra.Builder
     Relations.Algebra.Iso8601
     Relations.Algebra.Lazy
     Relations.Algebra.List
@@ -67,6 +68,7 @@ library
     Relations.Instances.HashSet
     Relations.Instances.LazyByteString
     Relations.Instances.LazyText
+    Relations.Instances.LazyTextBuilder
     Relations.Instances.Set
     Relations.Instances.String
     Relations.Instances.Text
