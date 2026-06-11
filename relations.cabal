@@ -59,6 +59,7 @@ library
     Relations.Algebra.Iso8601
     Relations.Algebra.Lazy
     Relations.Algebra.List
+    Relations.Algebra.Wrapper
     Relations.Algebra.Set
     Relations.Algebra.Utf8
     Relations.Instances
